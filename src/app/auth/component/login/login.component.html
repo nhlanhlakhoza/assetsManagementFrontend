@@ -1,0 +1,38 @@
+<div class="auth-wrapper">
+  <div class="auth-content">
+    <div class="card">
+      <div class="row align-items-center text-center">
+        <div class="col-md-12">
+          <div class="card-body">
+            <img src="assets/images/default.png" alt="logo" class="img-fluid mb-4" />
+           <h4 class="mb-3 f-w-400" style="color: white;font-weight: 700;">Welcome Back</h4>
+           <h4 class="mb-3 f-w-400 custom-title">Login</h4>
+           <form [formGroup]="loginForm">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon2"><i class="feather icon-mail"></i></span>
+              <input type="email" class="form-control" placeholder="Email address"  formControlName="email" aria-label="Username" aria-describedby="basic-addon2" />
+            </div>
+            <div class="input-group mb-4">
+              <span class="input-group-text" id="basic-addon3"><i class="feather icon-lock"></i></span>
+              <input type="password" class="form-control" placeholder="Password" formControlName="password" aria-label="Username" aria-describedby="basic-addon3" />
+            </div>
+           
+            <div class="d-grid">
+              <button class="btn btn-primary btn-block mb-4"[disabled]="loginForm.invalid" (click)="onSubmit()">Sign up</button>
+            </div>
+             <p class="mb-2 ">
+              Forgot password?
+              <a href="javascriprt:" class="f-w-400" style="color: white;">Reset</a>
+            </p>
+            <p class="mb-2">
+               Don’t have an account?
+              <a [routerLink]="['/signup']" class="f-w-400" style="color: white;">Signin</a>
+            </p>
+             </form>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</div>
