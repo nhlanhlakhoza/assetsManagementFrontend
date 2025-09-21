@@ -9,13 +9,43 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './admin/component/dashboard/dashboard.component';
+import { FooterComponent } from './theme/layout/admin/footer/footer.component';
+import { NavBarComponent } from './theme/layout/admin/nav-bar/nav-bar.component';
+import { NavBarLeftComponent } from './theme/layout/admin/nav-bar/nav-bar-left/nav-bar-left.component';
+import { NavBarRightComponent } from './theme/layout/admin/nav-bar/nav-bar-right/nav-bar-right.component';
+import { NavSearchComponent } from './theme/layout/admin/nav-bar/nav-bar-left/nav-search/nav-search.component';
+import { AdminComponent } from './theme/layout/admin/admin/admin.component';
+import { NavigationComponent } from './theme/layout/admin/navigation/navigation.component';
+import { NavContentComponent } from './theme/layout/admin/navigation/nav-content/nav-content.component';
+import { NavCollapseComponent } from './theme/layout/admin/navigation/nav-content/nav-collapse/nav-collapse.component';
+import { NavGroupComponent } from './theme/layout/admin/navigation/nav-content/nav-group/nav-group.component';
+import { NavItemComponent } from './theme/layout/admin/navigation/nav-content/nav-item/nav-item.component';
+import { NgbDropdownModule, NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgScrollbarModule } from 'ngx-scrollbar';
+
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent,
+    NavBarComponent,
+    NavBarLeftComponent,
+    NavBarRightComponent,
+    NavSearchComponent,
+    AdminComponent,
+    NavigationComponent,
+    NavContentComponent,
+    NavCollapseComponent,
+    NavGroupComponent,
+    NavItemComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -24,8 +54,12 @@ import { DashboardComponent } from './admin/component/dashboard/dashboard.compon
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule, 
+    NgbDropdownModule,
+    NgbModule,
    
+     
   ],
+ 
   providers: [
     provideClientHydration()
   ],

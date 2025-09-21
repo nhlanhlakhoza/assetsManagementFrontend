@@ -44,7 +44,7 @@ loginForm: FormGroup;
          StorageService.saveUser(user);
          StorageService.saveToken(res.jwt)
          if(StorageService.isAdminLoggedIn())
-          this.router.navigateByUrl("/admin/dashboard");
+          this.router.navigateByUrl("admin/dashboard");
         else if (StorageService.isEmployeeLoggedIn())
           this.router.navigateByUrl('employee/dashboard'); 
 

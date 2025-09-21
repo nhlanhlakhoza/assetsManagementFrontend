@@ -1,0 +1,11 @@
+<div class="navbar-content" style="height: calc(100vh - 56px); overflow-y: auto;">
+  <ul class="nav pcoded-inner-navbar" style="margin-top: -20px;" (clickOutside)="fireOutClick() ">
+    <ng-container *ngFor="let item of navigation; trackBy: trackByFn">
+      <app-nav-group *ngIf="item.type === 'group'" [item]="item"></app-nav-group>
+    </ng-container>
+  </ul>
+
+  
+
+ 
+</div>

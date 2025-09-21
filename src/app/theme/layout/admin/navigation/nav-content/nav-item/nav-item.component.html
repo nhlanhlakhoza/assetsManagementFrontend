@@ -1,0 +1,35 @@
+@if (!item()?.hidden) {
+  <!-- Internal navigation (Angular Router) -->
+  @if (item()?.url && !item()?.external) {
+    <li [ngClass]="item()?.classes" routerLinkActive="active">
+      <a class="nav-link"
+         [routerLink]="[item()?.url]"
+         [target]="'_self'"
+         (click)="closeOtherMenu($event)">
+         
+        @if (item()?.icon) {
+          <span class="pcoded-micon">
+            <i class="feather" [ngClass]="item()?.icon"></i>
+          </span>
+        }
+        <span class="pcoded-mtext">{{ item()?.title }}</span>
+      </a>
+    </li>
+  }
+
+  <!-- External navigation (outside Angular app) -->
+  @if (item()?.url && item()?.external) {
+    <li [ngClass]="item()?.classes">
+      <a [href]="item()?.url"
+         [target]="item()?.target ? '_blank' : '_self'">
+         
+        @if (item()?.icon) {
+          <span class="pcoded-micon">
+            <i class="feather" [ngClass]="item()?.icon"></i>
+          </span>
+        }
+        <span class="pcoded-mtext">{{ item()?.title }}</span>
+      </a>
+    </li>
+  }
+}
