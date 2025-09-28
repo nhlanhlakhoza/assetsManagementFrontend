@@ -22,7 +22,12 @@ import { NavGroupComponent } from './theme/layout/admin/navigation/nav-content/n
 import { NavItemComponent } from './theme/layout/admin/navigation/nav-content/nav-item/nav-item.component';
 import { NgbDropdownModule, NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgScrollbarModule } from 'ngx-scrollbar';
-
+import { SystemUsersComponent } from './admin/component/system-users/system-users.component';
+import { UserManagementComponent } from './admin/component/user-management/user-management.component';
+import { SharedComponent } from './theme/layout/shared/shared.component';
+import { BreadcrumbComponent } from './theme/layout/shared/component/breadcrumb/breadcrumb.component';
+import { CardComponent } from './theme/layout/shared/component/card/card.component';
+import { CreateUserComponent } from './admin/component/create-user/create-user.component';
 
 
 
@@ -45,6 +50,13 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     NavCollapseComponent,
     NavGroupComponent,
     NavItemComponent,
+    SystemUsersComponent,
+    UserManagementComponent,
+    SharedComponent,
+    BreadcrumbComponent,
+    CardComponent,
+    CreateUserComponent,
+    
    
   ],
   imports: [

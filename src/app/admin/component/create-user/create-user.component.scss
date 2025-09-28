@@ -1,0 +1,113 @@
+.popup-overlay {
+  /*display: flex; */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.popup-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1000px; 
+  /*box-shadow: 0 4px 12px rgba(0,0,0,0.15);*/
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-form label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.popup-form input[type="text"],
+.popup-form input[type="email"] {
+  margin-bottom: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.checkbox-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.submit-btn {
+  background-color: #00a9e0;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cancel-btn {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 8px;
+}
+.checkbox-group input[type="checkbox"] {
+  transform: scale(1.4);
+  margin-right: 20px;
+  appearance: none; 
+  width: 25px;
+  height: 25px;
+  border: 2px solid #00a9e0; 
+  border-radius: 4px;
+  background-color: white; 
+  position: relative;
+  cursor: pointer;
+}
+
+
+.checkbox-group input[type="checkbox"]:checked {
+  background-color: white;
+  border-color: #00a9e0;
+}
+
+/* Tick when checked */
+.checkbox-group input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  width: 6px;
+  height: 12px;
+  border: solid #00a9e0; 
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-group label {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}

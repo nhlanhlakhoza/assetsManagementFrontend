@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-card cardTitle="User Management" [options]="false">
+      <div class="user-management-container">
+        <div class="header">
+          <div class="search-register">
+            <input type="text" placeholder="Search..." class="search-input" />
+            <button class="register-btn" (click)="openRegisterForm()">Register User</button>
+          </div>
+        </div>
+
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Full Name</th>
+              <th>Last Activity</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.username }}</td>
+              <td>{{ user.fullName }}</td>
+              <td>{{ user.lastActivity }}</td>
+              <td><button class="suspend-btn">Suspend</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-card>
+  </div>
+</div>

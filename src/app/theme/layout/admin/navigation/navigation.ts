@@ -29,7 +29,7 @@ export const NavigationItems: NavigationItem[] = [
         id: 'dashboard',
         title: 'Dashboard',
         type: 'item',
-        url: '/analytics',
+        url: '/admin/dashboard',
         icon: 'feather icon-home'
       },
        {
@@ -38,17 +38,15 @@ export const NavigationItems: NavigationItem[] = [
         type: 'item',
         url: '/login',
         icon: 'feather icon-settings',
-        target: true,
-        breadcrumbs: false
+      
       },
        {
-        id: 'signin',
+        id: 'system',
         title: 'User Management',
         type: 'item',
-        url: '/login',
+        url: 'system',
         icon: 'feather icon-users',
-        target: true,
-        breadcrumbs: false
+     
       },
       {
         id: 'signin',
@@ -56,8 +54,7 @@ export const NavigationItems: NavigationItem[] = [
         type: 'item',
         url: '/login',
         icon: 'feather icon-log-in',
-        target: true,
-        breadcrumbs: false
+      
       },
 
     ]

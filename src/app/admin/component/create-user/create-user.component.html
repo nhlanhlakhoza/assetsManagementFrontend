@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-sm-12">
+    <app-card cardTitle="Register New User" [options]="false">
+      <div class="user-management-container">
+        <div class="popup-overlay">
+          <div class="popup-form">
+        
+            <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+
+              <!-- Name -->
+              <ngb-panel id="ngb-panel-1" title="User Information">
+                <ng-template ngbPanelContent>
+                  <input type="text" [(ngModel)]="newUser.name" class="form-control" placeholder="Enter Name" />
+                   <input type="text" [(ngModel)]="newUser.surname" class="form-control" placeholder="Enter Surname" />
+                   <input type="text" [(ngModel)]="newUser.email" class="form-control" placeholder="Enter Email" />
+                   <input type="text" [(ngModel)]="newUser.phoneNumber" class="form-control" placeholder="Enter phone Number" />
+                   <input type="text" [(ngModel)]="newUser.position" class="form-control" placeholder="Enter Position" />
+                </ng-template>
+              </ngb-panel> 
+
+              <!-- Position -->
+              <ngb-panel id="ngb-panel-3" title="User Role">
+                <ng-template ngbPanelContent>
+                  <div class="checkbox-group">
+                    <label>
+                      <input type="checkbox" [(ngModel)]="newUser.role.employee" />
+                      Employee
+                    </label>
+                    <label>
+                      <input type="checkbox" [(ngModel)]="newUser.role.systemAdmin" />
+                      System Administrator
+                    </label>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+
+            </ngb-accordion>
+  <br>
+  <br>
+            <!-- Buttons -->
+            <div class="form-actions">
+              <button class="submit-btn" (click)="registerUser()">Register</button>
+              <button class="cancel-btn" (click)="closeRegisterForm()">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-card>
+  </div>
+</div>
